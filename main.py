@@ -8,10 +8,10 @@ class Point:
         self.y = y
 
     def dist_to(self, p):
-        pass
+        return sqrt((p.x-self.x)**2 + (p.y-self.y)**2)
 
     def abs(self):
-        pass
+        return self.dist_to(Point(0, 0))
 
 
 class Rectangle:
@@ -24,7 +24,6 @@ def main():
 
     p2 = Point(-1.0, 6.5)
     print(f"It is a distance {p1.dist_to(p2):.5} away from the point ({p2.x}, {p2.y}).")
-
 
 if __name__ == "__main__":
     main()
